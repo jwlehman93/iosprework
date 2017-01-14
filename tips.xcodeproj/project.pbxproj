@@ -12,8 +12,6 @@
 		B40C64D41C1680370013A8FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B40C64D21C1680370013A8FB /* Main.storyboard */; };
 		B40C64D61C1680370013A8FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B40C64D51C1680370013A8FB /* Assets.xcassets */; };
 		B40C64D91C1680370013A8FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B40C64D71C1680370013A8FB /* LaunchScreen.storyboard */; };
-		B40C64E41C1680380013A8FB /* tipsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40C64E31C1680380013A8FB /* tipsTests.swift */; };
-		B40C64EF1C1680380013A8FB /* tipsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40C64EE1C1680380013A8FB /* tipsUITests.swift */; };
 		B40C64FF1C17504E0013A8FB /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40C64FE1C17504E0013A8FB /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -43,11 +41,7 @@
 		B40C64D81C1680370013A8FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B40C64DA1C1680370013A8FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B40C64DF1C1680380013A8FB /* tipsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tipsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B40C64E31C1680380013A8FB /* tipsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tipsTests.swift; sourceTree = "<group>"; };
-		B40C64E51C1680380013A8FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B40C64EA1C1680380013A8FB /* tipsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tipsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B40C64EE1C1680380013A8FB /* tipsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tipsUITests.swift; sourceTree = "<group>"; };
-		B40C64F01C1680380013A8FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B40C64FE1C17504E0013A8FB /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -80,8 +74,6 @@
 			isa = PBXGroup;
 			children = (
 				B40C64CD1C1680370013A8FB /* tips */,
-				B40C64E21C1680380013A8FB /* tipsTests */,
-				B40C64ED1C1680380013A8FB /* tipsUITests */,
 				B40C64CC1C1680370013A8FB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -108,24 +100,6 @@
 				B40C64DA1C1680370013A8FB /* Info.plist */,
 			);
 			path = tips;
-			sourceTree = "<group>";
-		};
-		B40C64E21C1680380013A8FB /* tipsTests */ = {
-			isa = PBXGroup;
-			children = (
-				B40C64E31C1680380013A8FB /* tipsTests.swift */,
-				B40C64E51C1680380013A8FB /* Info.plist */,
-			);
-			path = tipsTests;
-			sourceTree = "<group>";
-		};
-		B40C64ED1C1680380013A8FB /* tipsUITests */ = {
-			isa = PBXGroup;
-			children = (
-				B40C64EE1C1680380013A8FB /* tipsUITests.swift */,
-				B40C64F01C1680380013A8FB /* Info.plist */,
-			);
-			path = tipsUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,6 +171,7 @@
 					B40C64CA1C1680370013A8FB = {
 						CreatedOnToolsVersion = 7.1.1;
 						DevelopmentTeam = 29NV35KE97;
+						LastSwiftMigration = 0800;
 					};
 					B40C64DE1C1680380013A8FB = {
 						CreatedOnToolsVersion = 7.1.1;
@@ -270,7 +245,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B40C64E41C1680380013A8FB /* tipsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,7 +252,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B40C64EF1C1680380013A8FB /* tipsUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -410,6 +383,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.gorath.tips;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -425,6 +399,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.gorath.tips;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

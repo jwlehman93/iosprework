@@ -15,22 +15,22 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var tipPercentLabel: UILabel!
     @IBOutlet weak var tipSlider: UISlider!
     //intialize NSUserDefaults for settings
-    let defaults = NSUserDefaults.standardUserDefaults()
+    let defaults = UserDefaults.standard
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         //update tip segment control if exists to correct setting
-        if(defaults.objectForKey("tipPercent") != nil){
-            tipSlider.value = Float(defaults.integerForKey("tipPercent"))
-            tipPercentLabel.text = "\(defaults.integerForKey("tipPercent"))%"
+        if(defaults.object(forKey: "tipPercent") != nil){
+            tipSlider.value = Float(defaults.integer(forKey: "tipPercent"))
+            tipPercentLabel.text = "\(defaults.integer(forKey: "tipPercent"))%"
         }
         //update color scheme segment control if exists to correct setting
-        if(defaults.objectForKey("colorIndex") != nil) {
-            colorSchemeControl.selectedSegmentIndex = defaults.integerForKey("colorIndex")
+        if(defaults.object(forKey: "colorIndex") != nil) {
+            colorSchemeControl.selectedSegmentIndex = defaults.integer(forKey: "colorIndex")
         }
     }
 
@@ -38,15 +38,15 @@ class SettingsViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    override func viewWillDisappear(animated: Bool) {
+    override func viewWillDisappear(_ animated: Bool) {
         //save default tip and color scheme settings
         super.viewWillDisappear(animated)
-        defaults.setInteger(Int(tipSlider.value),forKey: "tipPercent")
-        defaults.setInteger(colorSchemeControl.selectedSegmentIndex, forKey:"colorIndex")
+        defaults.set(Int(tipSlider.value),forKey: "tipPercent")
+        defaults.set(colorSchemeControl.selectedSegmentIndex, forKey:"colorIndex")
         defaults.synchronize()
         
     }
-    @IBAction func onValueChanged(sender: UISlider) {
+    @IBAction func onValueChanged(_ sender: UISlider) {
         let currentValue = sender.value
         tipPercentLabel.text = "\(currentValue)"
         
